@@ -1,2 +1,21 @@
 1.没有GitHub或者GitHub上没有仓库，没有进行过上传的
-（1）登录GitHub，新建仓库：+ 
+（1）登录GitHub，新建仓库：+ new pository，输入仓库名称和类型（私有的别人不能拉取）
+（2）下载git，进行全局配置：git config --global user.name "用户名"
+		            git config --global user.email "邮箱名"
+（3）查看全局配置项：git config --list --global    查看配置的用户信息：git config user.name和git config user.email
+（4）在需要上传的项目文件夹（根目录）下单击鼠标右键，git bash here,打开git 终端
+（5）使用git管理文件：
+	1.初始化git,在项目文件夹同级生成.git文件，如果没有看到，可以检查一下是否被隐藏了
+	2.建立本地仓库与github仓库的连接：（使用http方式则每次都需要登录，所以这里使用ssh方式）
+		（1）生成ssh key:git-keygen -t rsa -C "邮箱名"【或者git-keygen -t rsa -b 4096 -C "邮箱名"】（github账号的邮箱），回车
+		（2）连敲三次回车，在C盘用户->administrator文件夹下会生成.ssh文件夹
+		（3）打开.ssh文件夹，用记事本打开其中的id_rsa.pub文件，复制内容
+		（4）打开github仓库，头像下拉->setting->ssh and gpgkeys->ssh keys->新建
+		（5）将（3）中的内容粘贴到文本框，保存
+		（6）查看ssh key是否配置成功：git -T git@github.com->yes
+		（7）执行命令git remote add origin "仓库的ssh地址"
+	
+	3.执行命令git add . 将项目文件夹下所有的文件被git跟踪
+	4.执行命令git commit -m "提交描述"
+	5.执行命令git pull origin master先拉取，再推送
+	6.执行命令git push origin master将本地仓库推送到GitHub
