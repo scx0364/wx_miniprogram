@@ -1,0 +1,16 @@
+<!--pages/home/home.wxml-->
+<!-- 请求网页数据 -->
+<button bindtap="getData">发起GET请求</button>
+<button bindtap="postData">发起POST请求</button>
+<!-- 声明式导航跳转页面 -->
+<!-- <navigator url="/pages/category/category" open-type="switchTab">导航到tapbar页面</navigator> -->
+<!-- 传参 在路径后面问号键值对，&分隔   只在跳转到非tapbar页面时才可以传参？-->
+<navigator url="/pages/category/category?name=zs&age=23" open-type="switchTab">导航到tapbar页面</navigator>
+<!-- 导航到非tapbar页面时，可以省略跳转方式open-type -->
+<navigator url="/pages/index/index?name=zs&age=23" open-type="navigate">导航到非tapbar页面</navigator>
+<!-- 编程式导航 -->
+<!-- 传参  在路径后面问号键值对，&分隔-->
+<!-- tapbar页面 -->
+<button bindtap="navfunc">导航到my页面</button>
+<!-- 非tapbar页面 -->
+<button bindtap="gotoIndex">导航到index页面</button>

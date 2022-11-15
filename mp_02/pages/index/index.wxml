@@ -32,3 +32,7 @@
 </view> -->
 <!-- 在使用wx:for循环数组时，最好加上wx:key指定唯一标识，wx:key的值不需要使用mastauch语法，如果没有key值，默认使用index -->
 <view wx:for="{{userData}}" wx:key="id" class="username">{{item.name}}</view>
+<!-- 声明式导航后退 -->
+<navigator open-type="navigateBack" delta="1"> 后退</navigator>
+<!-- 编程式导航后退 -->
+<button bindtap="goback">后退</button>

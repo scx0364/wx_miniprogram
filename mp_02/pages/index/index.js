@@ -17,7 +17,8 @@ Page({
          {id:1,name:'chole'},
          {id:2,name:'gracy'},
          {id:3,name:'tom'}
-     ]
+     ],
+     query:{} // 接收页面跳转携带的参数
  },
 //  事件处理函数
 btnTouchHandler(e) {
@@ -45,5 +46,22 @@ iptHandler(e) {
         msg:e.detail.value
     })
 
-}
+},
+//编程式导航后退
+goback() {
+    wx.navigateBack({
+      delta: 1, //1时可以省略
+    })
+},
+/**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad(options) {
+        console.log(options);
+        this.setData({
+            query:options
+        })
+    },
+
 })
+ 

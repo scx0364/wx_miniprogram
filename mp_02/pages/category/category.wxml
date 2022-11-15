@@ -1,0 +1,4 @@
+<!--pages/category/category.wxml-->
+<navigator open-type="navigateBack" delta="1">后退</navigator>
+<view>count 的值是{{count}}</view>
+<button bindtap="addData">add</button>
