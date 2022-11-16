@@ -1,0 +1,14 @@
+function splitPhone(str) {
+  if(str.length !== 11) return str
+
+  var arr = str.split('') // 将字符串转换为数组
+
+  arr.splice(3, 0, '-') // 从索引为3开始，删除0个元素，然后在索引为3的位置添加-元素
+  arr.splice(8, 0, '-')
+
+  return arr.join('')
+}
+
+module.exports = {
+  splitPhone: splitPhone
+}
