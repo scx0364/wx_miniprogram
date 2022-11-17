@@ -1,0 +1,14 @@
+
+
+
+<!-- <my-test1 max="9"></my-test1>  -->
+<!-- <my-test2></my-test2> -->
+
+
+<!-- <my-test3>
+    <view slot="before">这是在插槽中定义的</view>
+    <view slot= "after">这是后面的插槽</view>
+</my-test3> -->
+<my-test4 count="{{count}}" bind:sync="syncCount" class="customA"></my-test4>
+<view>count 的值为：{{count}}</view>
+<button bindtap="getChild">获取子组件的对象实例</button>

@@ -1,0 +1,4 @@
+<!--components/test3/test3.wxml-->
+<slot name="before"></slot>
+<view>这是在组件内部定义的</view>
+<slot name="after"></slot>

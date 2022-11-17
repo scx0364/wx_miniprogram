@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "my-test1":"/components/test/test",
+      "my-test2":"/components/test2/test2"
+  }
+}

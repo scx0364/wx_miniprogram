@@ -1,0 +1,5 @@
+<!--components/test4/test4.wxml-->
+<text>count的值为;{{count}}</text>
+<button bindtap="addCount">+1</button>
+
+<view>behaviors中声明的username是：{{username}}</view>

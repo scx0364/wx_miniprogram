@@ -1,0 +1,9 @@
+<!--components/test2/test2.wxml-->
+<view class="colorBox" style="background-color: rgb({{fullColor}});">颜色值：{{fullColor}}</view>
+<view class="btnBox">
+    <button class="btn1" bindtap="colorAddr">R</button>
+    <button type="primary" class="btn2" bindtap="colorAddg">G</button>
+    <button class="btn3" bindtap="colorAddb">B</button>
+</view>
+
+

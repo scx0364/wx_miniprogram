@@ -1,0 +1,24 @@
+/* components/test2/test2.wxss */
+.colorBox {
+    height: 200rpx;
+    line-height: 200rpx;
+    text-align: center;
+    font-size: 25rpx;
+    color: white;
+}
+.btnBox {
+    display: flex;
+    width: 150rpx;
+}
+button {
+    /* width: 40rpx; */
+    height: 50rpx;
+    font-size: 24rpx;
+   padding: 10rpx;
+}
+.btn1 {
+    color: #07c160;
+}
+.btn3 {
+    color: red;
+}
