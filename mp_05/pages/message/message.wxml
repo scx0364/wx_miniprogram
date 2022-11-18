@@ -1,2 +1,6 @@
 <!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<view>{{Num1}} + {{Num2}} = {{sum}}</view>
+<van-button type="primary" bindtap="btnHandeler1" data-step="{{1}}">+1</van-button>
+<van-button type="warning" bindtap="btnHandeler1" data-step="{{-1}}">-1</van-button>
+<view>----------</view>
+<cpns_numbers></cpns_numbers>

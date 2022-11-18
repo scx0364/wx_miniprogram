@@ -1,2 +1,2 @@
 <!--pages/home/home.wxml-->
-<van-button>按钮</van-button>
+<van-button type="primary" bindtap="getData">按钮</van-button>

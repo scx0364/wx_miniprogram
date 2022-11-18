@@ -7,7 +7,17 @@ Page({
   data: {
 
   },
-
+  async getData() {
+   const {data:res} = await wx.p.request({
+      url: 'https://www.escook.cn/api/get',
+      method:'GET',
+      data:{
+        name:'zs',
+        age:16
+      }
+    })
+    console.log(res)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

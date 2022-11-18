@@ -1,8 +1,34 @@
 {
+
   "pages": [
     "pages/home/home",
     "pages/message/message",
     "pages/contact/contact"
+  ],
+  "preloadRule": {
+    "pages/contact/contact": {
+      "network": "all",
+      "packages": ["pkgA"]
+    }
+  },
+  "subPackages": [
+    {
+      "root":"pkgA",
+      "name":"p1",
+      "pages": [
+        "pages/subp1/subp1",
+        "pages/subp2/subp2"
+      ]
+
+    },
+    {
+      "root": "pkgB",
+      "name": "p2",
+      "pages": [
+        "pages/subp11/subp11"
+      ],
+      "independent": true
+    }
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,6 +37,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "custom": true,
     "list": [
       {
         "pagePath": "pages/home/home",
@@ -32,8 +59,11 @@
       }
     ]
   },
-  "usingComponents": {
-    "van-button": "@vant/weapp/button/index"
+  "usingComponents": { 
+    "van-button": "@vant/weapp/button/index",
+    "cpns_numbers":"/components/numbers/numbers",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
   },
   "sitemapLocation": "sitemap.json"
 }
